@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import IconButton from "../component/IconButton";
 import { images } from "../images";
 import Input from "../component/Input";
-import { theme } from "../theme";
+import {theme} from "../theme";
 
 const Container = styled.View`
   flex-direction: row;

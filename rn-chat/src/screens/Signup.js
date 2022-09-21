@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect, useContext } from 'react';
 import styled from 'styled-components/native';
-import { Button, Image, Input, ErrorMessage } from '../components';
+import { Button, Input, ErrorMessage } from '../components';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import { signup } from '../firebase';
 import { Alert } from 'react-native';
@@ -12,17 +12,14 @@ const Container = styled.View`
   justify-content: center;
   align-items: center;
   background-color: ${({ theme }) => theme.background};
-  padding: 50px 20px;
+  padding: 240px 20px;
 `;
 
-const DEFAULT_PHOTO =
-  'https://firebasestorage.googleapis.com/v0/b/rn-chat-aba36.appspot.com/o/face.png?alt=media';
 
 const Signup = ({ navigation }) => {
   const { setUser } = useContext(UserContext);
   const { spinner } = useContext(ProgressContext);
 
-  const [photo, setPhoto] = useState(DEFAULT_PHOTO);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -77,8 +74,9 @@ const Signup = ({ navigation }) => {
 
   return (
     <KeyboardAwareScrollView extraScrollHeight={20}>
+      
       <Container>
-        <Image showButton={true} url={photo} onChangePhoto={setPhoto} />
+        
         <Input
           label="Name"
           placeholder="Name"
@@ -123,7 +121,7 @@ const Signup = ({ navigation }) => {
         />
         <ErrorMessage message={errorMessage} />
         <Button
-          title="Sign up"
+          title="Sign Up"
           onPress={_handleSignupBtnPress}
           disabled={disabled}
         />

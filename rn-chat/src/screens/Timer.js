@@ -23,7 +23,6 @@ export const Timer = () => {
 
 */
 import React, { Component } from 'react';
-import Folkme from '../component/Folkme';
 import Settings from '../component/Settings';
 import Times from '../component/Times';
 import Controller from '../component/Controller';
@@ -31,19 +30,19 @@ import Controller from '../component/Controller';
 import styled from 'styled-components/native';
 
 const Container = styled.SafeAreaView`
-flex: 1;
-background-color: #d4e6ff;
-align-items: center;
-justify-content: center;
+  flex: 1;
+  background-color: ${({ theme }) => theme.background};
+  align-items: center;
+  justify-content: center;
 `;
 
 const Title = styled.Text`
 
-font-size: 38px;
-font-weight: 800;
-color: #778bdd;
-align-self: flex-start;
-margin: 10px 25px;
+  font-size: 38px;
+  font-weight: 800;
+  color: #778bdd;
+  align-self: flex-start;
+  margin: 10px 25px;
 `;
 
 export default class Timer extends Component {
@@ -167,6 +166,7 @@ export default class Timer extends Component {
 
   render() {
     return (
+      
       <Container>
       
         
@@ -195,14 +195,7 @@ export default class Timer extends Component {
   
           <audio id="beep" preload="auto" src="https://goo.gl/65cBl1" ref={this.audioBeep}></audio>
 
-          <Folkme
-            targetURL={this.props.githubURL}
-            color="#4c4d4e"
-            backgroundColor="#fff"
-            position="right"
-            size="120px"
-            ariaLabel="View source on Github"
-          />
+          
           
           
   

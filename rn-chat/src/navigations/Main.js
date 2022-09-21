@@ -10,7 +10,8 @@ const Main = () => {
   const theme = useContext(ThemeContext);
 
   return (
-    <Stack.Navigator
+    
+    <Stack.Navigator 
       screenOptions={{
         headerTitleStyle:{
           fontWeight: 'bold',

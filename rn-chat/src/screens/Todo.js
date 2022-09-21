@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { StatusBar, Dimensions } from "react-native";
 import styled, { ThemeProvider } from 'styled-components/native'; 
-import {theme} from "../theme";
+import {theme, dark} from "../theme";
 import Input from "../component/Input";
 import Task from "../component/Task";
 import AsyncStorage from "@react-native-async-storage/async-storage";
@@ -90,10 +90,10 @@ const Todo=()=>{
       setNewTask("");
     };*/
     
-  
+    
     return  (
       
-      <ThemeProvider theme={theme}>
+      
         <Container>
           <StatusBar
           barStyle="light-content"
@@ -123,7 +123,7 @@ const Todo=()=>{
               ))}
           </List>  
         </Container>
-      </ThemeProvider>
+
     );
 };
 

@@ -1,8 +1,8 @@
 .times {
   width: 100%;
   display: flex;
-  color: #000;
-  -webkit-text-stroke: 1px #000000;
+  color: #778bdd;
+  -webkit-text-stroke: 0.5px #ffffff;
   /*display: -webkit-flex;*/
   justify-content: center;
 }

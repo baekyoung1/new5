@@ -49,4 +49,33 @@ export const theme = {
   // Chat
   sendBtnActive: Colors.main,
   sendBtnInactive: Colors.grey_1,
+  
+
+};
+
+
+export const dark = {
+  background: '#000000',
+  backgroundColor: '#000000',
+  text: "#778bdd",
+  inputBackground: Colors.white,
+  inputLabel: Colors.grey_1,
+  inputPlaceholder: Colors.grey_1,
+  inputBorder: Colors.grey_1,
+  inputDisabled: Colors.white,
+  btnBackground: Colors.main,
+  btnTitle: Colors.white,
+  btnTextLink: Colors.white,
+  btnSignout: Colors.main,
+  
+
+  ios_backgroundColor: '#000000',
+
+  tabBarActiveTintColor: '#ffffff',
+  tabBarInactiveTintColor: '#778bdd',
+  itemBackground : Colors.white,
+  itemBorder: Colors.white,
+  itemTime: Colors.grey_1,
+  itemDesc: Colors.grey_1,
+  itemIcon: Colors.main,
 };

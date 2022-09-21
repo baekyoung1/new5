@@ -37,6 +37,7 @@ const Profile = () => {
 
   return (
     <Container>
+      
       <Image showButton url={photo} onChangePhoto={_handlePhotoChange} />
       <Input label="Name" value={user.name} disabled />
       <Input label="Email" value={user.email} disabled />

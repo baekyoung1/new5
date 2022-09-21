@@ -88,13 +88,13 @@ const Signin = ({ navigation }) => {
         />
         <ErrorMessage message={errorMessage} />
         <Button
-          title="Sign in"
+          title="Sign In"
           onPress={_handleSigninBtnPress}
           disabled={disabled}
         />
         <Button
-          title="or sign up"
-          onPress={() => navigation.navigate('Signup')}
+          title="Sign Up"
+          onPress={() => navigation.navigate('Sign Up')}
           containerStyle={{ marginTop: 0, backgroundColor: 'transparent' }}
           textStyle={{ color: theme.btnTextLink, fontSize: 18 }}
         />

@@ -20,7 +20,7 @@ const StyledInput = styled.TextInput.attrs(({ theme }) => ({
   background-color: ${({ theme, editable }) =>
     editable ? theme.inputBackground : theme.inputDisabled};
   color: ${({ theme }) => theme.text};
-  padding: 20px 10px;
+  padding: 15px 10px;
   font-size: 16px;
   border: 1px solid
     ${({ theme, isFocused }) => (isFocused ? theme.text : theme.inputBorder)};
