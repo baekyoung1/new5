@@ -1,14 +1,12 @@
 import React, { useState, useContext, useEffect } from 'react';
 import styled,{ ThemeProvider, ThemeContext } from 'styled-components/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { ChannelList, Profile, Timer } from '../screens';
+import { ChannelList, Profile, Timer} from '../screens';
 import Todo from '../screens/Todo';
+import Calendar from '../screens/Calendar';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
 //import styled from 'styled-components';
-import { Switch } from 'react-native';
-import { theme, dark } from '../theme';
-
 
 
 const TabIcon = ({ name, focused, color }) => {
@@ -79,7 +77,7 @@ const Home = ({ navigation, route }) => {
         
         <Tab.Screen
           name="Calendar"
-          component={Profile}
+          component={Calendar}
           options={{
             tabBarIcon: props =>
               TabIcon({

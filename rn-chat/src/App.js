@@ -6,15 +6,16 @@ import Navigation from './navigations';
 import { UserProvider, ProgressProvider } from './contexts';
 import {View, StyleSheet, Switch} from 'react-native';
 import { Profile } from './screens';
+import Toggle from "react-native-toggle-element";
 
 const Container = styled.SafeAreaView`
   background-color: ${({ theme }) => theme.background};
   align-items: flex-end;
-  justify-content: flex-start;
   padding: 5px;
 
 `;
-/*onst styles = StyleSheet.create({
+
+/*const styles = StyleSheet.create({
   container: {
     alignItems: 'flex-end',
     justifyContent: 'center',
@@ -24,7 +25,6 @@ const Container = styled.SafeAreaView`
   
 });*/
 const App = () => {
-
 
   const [isDark, setIsDark] = useState(false);
   const _toggleSwitch = () => setIsDark(!isDark);
@@ -38,15 +38,23 @@ const App = () => {
               barStyle="dark-content"
             />
               <Container>
-                  <Switch
-                    trackColor={{false: '#767577', true: '#81b0ff'}}
-                    thumbColor= '#ffffff'
-                    ios_backgroundColor={theme.background}
-                    onValueChange={_toggleSwitch}
-                    backgroundColor={theme.background}
-                    value={isDark}
-                    
-                  />
+              <Toggle onPress={(val) => setIsDark(val)}
+                trackColor={{false: '#767577', true: '#81b0ff'}}
+                thumbButton = {{borderWidth : 0, width: 16, height:16, 
+                  inActiveBackgroundColor:"#ffffff", activeBackgroundColor: "#ffffff",}}
+                ios_backgroundColor={theme.background}
+                onValueChange={_toggleSwitch}
+                backgroundColor={theme.background}
+                value={isDark}
+                trackBar={{
+                  activeBackgroundColor: theme.main,
+                  inActiveBackgroundColor: "#919191",
+                  
+                  width: 30,
+                  height: 16,
+                  radius: 25,
+                }}/>
+                  
               </Container>
             <Navigation />
           </UserProvider>
